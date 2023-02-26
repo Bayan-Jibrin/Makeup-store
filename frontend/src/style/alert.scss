@@ -1,0 +1,16 @@
+.alert {
+  font-size: max(14px, 1.11vw);
+  border-radius: 4px;
+  margin: 0.87em 0;
+  padding: 0.6em;
+}
+.alert-danger {
+  background-color: #ffefef;
+  border: 1px solid rgb(151, 4, 4);
+  color: rgb(151, 4, 4) !important;
+}
+.alert-success {
+  color: #155724 !important;
+  background: #d4edda;
+  border: 1px solid #155724;
+}

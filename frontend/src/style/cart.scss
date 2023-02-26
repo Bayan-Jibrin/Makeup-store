@@ -1,0 +1,71 @@
+.showCart {
+  background: #fff;
+  width: 70%;
+  padding: 1.25em 0;
+  margin: 0 auto;
+  font-size: max(14px, 1.388vw);
+
+  .details {
+    padding: 0.9375em 1.875em;
+    &_title {
+      @include flex(center, space-between, row);
+      border-bottom: 0.125em solid rgb(136, 8, 8);
+      padding-bottom: 0.4375em;
+      h3 {
+        font-size: 1em;
+        font-weight: 600;
+      }
+    }
+    &_content {
+      @include flex(center, space-between, row);
+      margin: 1.25em 0;
+
+      &_img {
+        img {
+          @include width(8em, 8em, red, none, 50%, none);
+          object-fit: cover;
+        }
+      }
+      p {
+        margin: 0;
+      }
+
+      p:not(:last-of-type) {
+        margin-bottom: 0.7em;
+      }
+
+      i {
+        color: #ff5400;
+        font-size: 1.865em;
+        cursor: pointer;
+      }
+    }
+    &_total {
+      padding-top: 0.4375em;
+      h4 {
+        font-size: 1em;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .empty {
+    @include flex(center, space-between, center);
+    @include pa_ma(0 1.25em, 0);
+    img {
+      width: 3.125em;
+      height: 3.125em; /*50*/
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .showCart {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .showCart {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+@import './mixins.scss';
+@import './details.scss';
+@import './navbar.scss';
+@import './types.scss';
+@import './admin.scss';
+@import './form.scss';
+@import './auth.scss';
+@import './cart.scss';
+@import './alert.scss';
+
+.grid {
+  @include pa_ma(none, 3.125vw 7.361vw);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  .card {
+    font-size: 1.805vw;
+    @include pa_ma(0.5385em, none);
+    font-family: "Open Sans", sans-serif;
+
+    .card__internal {
+      border: 0.0769em solid rgb(244, 52, 84);
+      border-radius: 0.1923em;
+
+      &:hover {
+        transform: translateY(-0.1923em);
+        transition: transform 0.1s ease;
+      }
+
+      &-image {
+        @include pa_ma(0.7692em, none);
+        height: 9.615em;
+        background-color: #fff;
+        @include flex(center, center, row);
+
+        img {
+          height: 100%;
+          max-width: 100%;
+          width: auto;
+        }
+      }
+
+      &-content {
+        @include pa_ma(0.7692em, none);
+        border-top: 1px solid rgb(244, 52, 84);
+
+        h1 {
+          line-height: 1.1538em;
+          height: 2.1538em;
+          color: rgba(0, 0, 0, 0.85);
+          font-weight: 600;
+          overflow: hidden;
+          margin: 0 0.1923em;
+          font-size: 1em;
+        }
+
+        p:nth-child(2) {
+          margin-bottom: 0.208em;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.85);
+          font-size: 0.923em;
+        }
+
+        p:last-of-type {
+          font-size: 0.6923em;
+          color: #333;
+          color: rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    .card {
+      font-size: calc(2 * 1.805vw);
+    }
+  }
+  .btn-container {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    .card {
+      font-size: calc(4 * 1.805vw);
+    }
+  }
+  .btn-container {
+    @include flex(center, none,column);
+    .filter-btn {
+        width: 70%;
+        margin-top: 0.4em;
+    }
+  }
+}

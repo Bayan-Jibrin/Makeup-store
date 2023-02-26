@@ -1,0 +1,105 @@
+.container {
+    @include pa_ma(none, 3.125vw 7.361vw);
+    &__internal {
+      position: relative;
+      @include flex(center, center, row);
+      font-size: 2.222vw;
+      border: 0.0626em solid rgb(244, 52, 84);
+      font-family: "Open Sans", sans-serif;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 0.0626em;
+        background-color: rgb(244, 52, 84);
+      }
+  
+      &-image {
+        @include flex(center, center, row);
+        width: 50%;
+        padding: 0.625em;
+        padding-right: 1.25em;
+        img {
+          width: 80%;
+        }
+      }
+  
+      &-content {
+        width: 50%;
+        padding: 0.625em;
+        padding-left: 1.25em;
+        
+        h1 {
+          color: #333;
+          @include font (700,1em,1.25em);
+        }
+        h2 {
+          margin: 0;
+          color: rgb(136, 8, 8);
+        }
+        
+        h2,
+        &_add,
+        &_icons {
+          @include flex(center, center, row);
+          @include font (500,0.875em,none);
+          color: #333;
+          background-color: peachpuff;
+          border-radius: 0.1428em;
+          width: 40%;
+          text-align: center;
+          height: 1.7857em;
+          border: 0.0357em solid peachpuff;
+        }
+        &_icons {
+          @include flex(center, space-between , row);
+          background-color:#fff;
+          border: 0.0357em solid rgba(0, 0, 0, 0.05);
+          color:#ff5400;
+          width: 60%;
+          margin: 0 auto;
+          box-shadow: rgba(0, 0, 0, 0.05) 1px 1.5px 1.2px 2.5px;
+        }
+  
+        &_add {
+          width: 60%;
+          margin: 0 auto;
+          border: 0.0357em solid rgb(244, 52, 84);
+          color: #fff;
+          background-color: rgb(244, 52, 84);
+          
+        }
+        p {
+          color: #777;
+          @include font(none,0.625em,1.5em);
+        }
+        h3 {
+          font-size: 0.6875em;
+          color: brown;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 720px) {
+    .container {
+      &__internal {
+        flex-direction: column;
+        font-size: MAX(18px, calc(2 * 2.222vw));
+        &-image,
+        &-content {
+          width: 90%;
+        }
+        &-image {
+          border-bottom: 0.0626em solid rgb(244, 52, 84);
+        }
+  
+        &::before {
+          content: none;
+        }
+      }
+  
+    }
+    
+  }

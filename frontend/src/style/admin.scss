@@ -1,0 +1,62 @@
+.admin {
+  font-size: 1.66vw;
+  input {
+    width: 400px;
+    font-size: max(1em, 18px);
+    border: 2px solid pink;
+    border-radius: 4px;
+    padding: 0.41em;
+    box-sizing: border-box;
+    &::placeholder {
+      font-size: 0.83em; /*20px*/
+    }
+    margin-right: 0.66em;
+  }
+
+  &_header {
+    margin: 1em 7.361vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    button {
+      border-color: transparent;
+      font-size: max(1em, 18px);
+      text-transform: capitalize;
+      margin: 0.33em 0;
+      letter-spacing: 1px;
+      padding: 0.25em 0.5em;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      border-radius: 4px;
+      background-color: #c59d5f;
+      color: #fff;
+      &:hover {
+        border: 3px solid rgb(243, 243, 48);
+      }
+    }
+  }
+
+  .card__internal-content_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      border-color: transparent;
+      font-size: max(0.66em, 12px);
+      text-transform: capitalize;
+      margin: 0.7em 0;
+      letter-spacing: 1px;
+      padding: 0.375em 0.75em;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      border-radius: 4px;
+      background-color: #c59d5f;
+      color: #fff;
+      &:hover {
+        border: 3px solid rgb(243, 243, 48);
+      }
+    }
+  }
+}

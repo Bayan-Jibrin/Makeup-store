@@ -1,0 +1,66 @@
+.Navbar_container {
+  background-color: peachpuff;
+  display: flex;
+  padding: 2.6vw 9.72vw;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.47vw;
+  > p {
+    font-size: max(1em, 38px);
+    font-weight: 600;
+    color: rgb(244, 52, 84);
+    margin: 0;
+    margin-right: auto;
+  }
+  .Navbar_content {
+    width: max(360px, 45%);
+    margin-left: 0.32em;
+    display: flex;
+    a {
+      text-decoration: none;
+      color: black;
+      color: peru;
+    }
+    p {
+      margin: 0 auto;
+      font-weight: 500;
+      font-size: max(0.44em, 18px);
+      color: peru;
+    }
+    &-inner {
+      width: 40%;
+      display: flex;
+      p {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .Navbar_container {
+    flex-direction: column;
+    .Navbar_content {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .Navbar_container {
+    .Navbar_content {
+      flex-direction: column;
+      align-items: center;
+      p {
+        margin: 4px 0;
+      }
+      &-inner {
+        flex-direction: column;
+        align-items: center;
+        p {
+          margin: 4px 0;
+        }
+      }
+    }
+  }
+}
